@@ -25,7 +25,6 @@ class EntreesController < ApplicationController
   # POST /entrees.json
   def create
     @entree = Entree.new(entree_params)
-
     respond_to do |format|
       if @entree.save
         format.html { redirect_to @entree, notice: 'Entree was successfully created.' }
@@ -69,6 +68,6 @@ class EntreesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entree_params
-      params.require(:entree).permit(:item, :price)
+      params.require(:entree).permit(:item, :description, :price)
     end
 end

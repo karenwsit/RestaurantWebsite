@@ -1,9 +1,10 @@
-<h1>Listing entrees</h1>
+<h1>Menu</h1>
 
 <table>
   <thead>
     <tr>
       <th>Item</th>
+      <th>Description</th>
       <th>Price</th>
       <th></th>
       <th></th>
@@ -15,6 +16,7 @@
     <% @entrees.each do |entree| %>
       <tr>
         <td><%= entree.item %></td>
+        <td><%= entree.description %></td>
         <td><%= entree.price %></td>
         <td><%= link_to 'Show', entree %></td>
         <td><%= link_to 'Edit', edit_entree_path(entree) %></td>
